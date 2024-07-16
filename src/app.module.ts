@@ -2,9 +2,10 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { FactoryMethodModule } from './factory_method/factory_method.module';
+import { AbstractFactoryModule } from './abstract_factory/abstract_factory.module';
 
 @Module({
-  imports: [FactoryMethodModule],
+  imports: [FactoryMethodModule, AbstractFactoryModule],
   controllers: [AppController],
   providers: [AppService],
 })
